@@ -1,0 +1,116 @@
+ion-content{
+
+  .ion-margin-start{
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+
+    img{
+      height: 37.5px;
+      width: 37.5px;
+    }
+
+  }
+
+  .totalIncome{
+    text-align: center;
+    font-size: 11px;
+    position: absolute;
+    text-transform: uppercase;
+    left: 0;
+    right: 0;
+    top: 10%;
+
+    h1{
+      font-weight: 600;
+      font-size: 42px;
+      margin-top: -5px;
+      display: flex;
+      justify-content: center;
+
+      div {
+        font-size: 28px;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .historiqueHead{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60%;
+    font-size: 11px;
+    padding: 0 15px;
+  }
+
+  .historiqueContent{
+    ion-card{
+      box-shadow: none;
+      background-color: #E1E1E1;
+      border-radius: 35px;
+      max-height: 130px;
+
+
+      ion-card-header{
+        background-color: #DBDBDB;
+        display: flex;
+        justify-content: space-between;
+        padding-right:  25px;
+        padding-left: 25px;
+        // bottom:  10px;
+        // // padding-bottom:  8px;
+        // height: 30px;
+
+
+        .historiqueDate{
+          color: black;
+          font-size: 12px;
+        }
+
+        .historiqueAction{
+          color: #28ba62;
+          font-size: 12px;
+        }
+      }
+
+      ion-avatar{
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .btcUsdtTotalPrice{
+    h2{
+      font-weight: 600;
+      font-size: 21px;
+      display: flex;
+      justify-content: center;
+      color: #0e5229;
+      margin-top: 20px;
+
+      div {
+        font-size: 16px;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .currency{
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .currencyPrice{
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+}
+
+// ion-card-header.ios {
+//   display: flex;
+//   flex-flow: column-reverse;
+// }

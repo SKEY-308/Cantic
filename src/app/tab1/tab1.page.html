@@ -1,17 +1,48 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-avatar class="ion-margin-start">
+    <img src="/assets/avatar2.jpg" />
+  </ion-avatar>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="totalIncome">
+    <p>Revenue Total, {{userName}} </p>
+    <h1> <div>$</div> {{totalIcome}} </h1>
+  </div>
+
+  <div  class="historiqueHead">
+    <div>
+      <p>Historiques des Transactions</p>
+    </div>
+    <div>
+      <p>Voir Tout</p>
+    </div>
+  </div>
+
+  <div class="historiqueContent">
+    <ion-card *ngFor="let current of currentData">
+      <ion-card-header>
+        <div class="historiqueDate"> {{current.date | date: 'fullDate'}} </div>
+        <div class="historiqueAction" [ngStyle]="{'color': current.action === true? 'green' : 'red'}"><span *ngIf="current.action === true">BUY</span> <span *ngIf="current.action === !true">SELL</span></div>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-row>
+          <ion-col size="2">
+            <ion-avatar>
+              <img style="height: 34.5px; width: 34.5px;" [src]="current.logo" />
+            </ion-avatar>
+          </ion-col>
+
+          <ion-col size="6">
+            <div class="currency"> {{current.currency}} </div>
+            <div class="currencyPrice"> ${{current.buyPrice}} - ${{current.actualPrice}}</div>
+          </ion-col>
+
+          <ion-col size="4" class="btcUsdtTotalPrice">
+            <h2><div>$</div>{{current.amount}} </h2>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
 </ion-content>
