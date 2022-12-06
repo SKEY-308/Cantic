@@ -30,3 +30,11 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
+
+ion-searchbar {
+  input {
+    border-radius: 30px !important;
+    box-shadow: none !important;
+    background-color: #F1F1F1 !important;
+  }
+}

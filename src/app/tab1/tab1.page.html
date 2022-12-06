@@ -1,20 +1,18 @@
 <ion-content [fullscreen]="true">
-  <ion-avatar class="ion-margin-start">
-    <img src="/assets/avatar2.jpg" />
-  </ion-avatar>
+  <app-avatar-container></app-avatar-container>
 
   <div class="totalIncome">
-    <p>Revenue Total, {{userName}} </p>
+    <p>Revenu Total, {{userName}} </p>
     <h1> <div>$</div> {{totalIcome}} </h1>
   </div>
 
-  <div  class="historiqueHead">
+  <div class="historiqueHead">
     <div>
       <p>Historiques des Transactions</p>
     </div>
-    <div>
+    <!-- <div>
       <p>Voir Tout</p>
-    </div>
+    </div> -->
   </div>
 
   <div class="historiqueContent">

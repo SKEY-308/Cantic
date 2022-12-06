@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
+import { AvatarContainerComponentModule } from '../avatar-container/avatar-container.module';
+
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 
 @NgModule({
@@ -13,6 +15,7 @@ import { Tab2PageRoutingModule } from './tab2-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
+    AvatarContainerComponentModule,
     Tab2PageRoutingModule
   ],
   declarations: [Tab2Page]

@@ -40,12 +40,13 @@ ion-content{
   .historiqueHead{
     display: flex;
     justify-content: space-between;
-    margin-top: 60%;
+    margin-top: 40%;
     font-size: 11px;
     padding: 0 15px;
   }
 
   .historiqueContent{
+    padding-bottom: 75px;
     ion-card{
       box-shadow: none;
       background-color: #E1E1E1;
@@ -101,16 +102,13 @@ ion-content{
     font-weight: bold;
     font-size: 12px;
     margin-top: 15px;
+    color: black;
   }
 
   .currencyPrice{
-    font-weight: bold;
+    // font-weight: bold;
     font-size: 10px;
+    color: black;
   }
 
 }
-
-// ion-card-header.ios {
-//   display: flex;
-//   flex-flow: column-reverse;
-// }
