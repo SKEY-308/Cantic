@@ -58,8 +58,9 @@
         </ion-col>
 
         <ion-col size="4" class="btcUsdtTotalPrice">
-          <div class="historiqueAction" [ngStyle]="{'color': current.action === true? 'green' : 'red'}"><span
-              *ngIf="current.action === true">BUY</span> <span *ngIf="current.action === !true">SELL</span></div>
+          <div class="historiqueAction" [ngStyle]="{'color': current.action === true? 'green' : 'red'}">
+            <span *ngIf="current.action === true">BUY</span> <span *ngIf="current.action === !true">SELL</span>
+          </div>
           <h2>
             <div>$</div>{{current.amount}}
           </h2>
