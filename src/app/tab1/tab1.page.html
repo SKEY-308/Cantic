@@ -3,23 +3,23 @@
 
   <div class="totalIncome">
     <p>Revenu Total, {{userName}} </p>
-    <h1> <div>$</div> {{totalIcome}} </h1>
+    <h1>
+      <div>$</div> {{totalIcome}}
+    </h1>
   </div>
 
   <div class="historiqueHead">
     <div>
       <p>Historiques des Transactions</p>
     </div>
-    <!-- <div>
-      <p>Voir Tout</p>
-    </div> -->
   </div>
 
   <div class="historiqueContent">
     <ion-card *ngFor="let current of currentData">
       <ion-card-header>
         <div class="historiqueDate"> {{current.date | date: 'fullDate'}} </div>
-        <div class="historiqueAction" [ngStyle]="{'color': current.action === true? 'green' : 'red'}"><span *ngIf="current.action === true">BUY</span> <span *ngIf="current.action === !true">SELL</span></div>
+        <div class="historiqueAction" [ngStyle]="{'color': current.action === true? 'green' : 'red'}"><span
+            *ngIf="current.action === true">BUY</span> <span *ngIf="current.action === !true">SELL</span></div>
       </ion-card-header>
 
       <ion-card-content>
@@ -36,7 +36,9 @@
           </ion-col>
 
           <ion-col size="4" class="btcUsdtTotalPrice">
-            <h2><div>$</div>{{current.amount}} </h2>
+            <h2>
+              <div>$</div>{{current.amount}}
+            </h2>
           </ion-col>
         </ion-row>
       </ion-card-content>
