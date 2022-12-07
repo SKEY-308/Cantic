@@ -1,17 +1,70 @@
-<ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="container">
+
+    <div class="flex-container">
+      <ion-chip class="item">Favorites</ion-chip>
+      <ion-chip class="item">30D ROI</ion-chip>
+      <ion-chip class="item">Total PNL</ion-chip>
+      <ion-chip class="item">Win Rates</ion-chip>
+    </div>
+
+  </div>
+
+
+  <div class="traderList">
+    <ion-row *ngFor="let current of currentData">
+      <ion-col size="2">
+        <div class="circle">
+          <ion-avatar>
+            <img style="height: 34.5px; width: 34.5px;" [src]="current.logo" />
+          </ion-avatar>
+        </div>
+      </ion-col>
+
+      <ion-col size="6">
+        <div class="currency"> {{current.currency}} </div>
+        <div class="currencyPrice"> ${{current.buyPrice}} - ${{current.actualPrice}}</div>
+      </ion-col>
+
+      <ion-col size="4" class="btcUsdtTotalPrice">
+        <div class="historiqueAction" [ngStyle]="{'color': current.action === true? 'green' : 'red'}">
+          <span *ngIf="current.action === true">BUY</span> <span *ngIf="current.action === !true">SELL</span>
+        </div>
+        <h2>
+          <div>$</div>{{current.amount}}
+        </h2>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+
 </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
